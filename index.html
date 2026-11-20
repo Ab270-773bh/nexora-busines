@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -7,94 +8,500 @@
 <title>NEXORA BUSINESS</title>
 <style>
 :root{--bg:#0b1220;--panel:#121d2e;--panel2:#18263a;--text:#edf3fb;--muted:#9aabc0;--accent:#54d6b0;--line:#26364c}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
-button,input{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 15px;background:var(--accent);color:#06251d;font-weight:700}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,sans-serif}
+button,input{font:inherit}
+button{cursor:pointer;border:0;border-radius:12px;padding:11px 15px;background:var(--accent);color:#06251d;font-weight:700}
 .top{display:flex;align-items:center;justify-content:space-between;padding:16px 5%;border-bottom:1px solid var(--line);background:#0e1828;position:sticky;top:0;z-index:2}
-.brand{font-weight:900;letter-spacing:1px;font-size:20px}.brand span{color:var(--accent)}.actions{display:flex;gap:8px;align-items:center}
+.brand{font-weight:900;letter-spacing:1px;font-size:20px}
+.brand span{color:var(--accent)}
+.actions{display:flex;gap:8px;align-items:center}
 .ghost{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
-.wrap{max-width:1150px;margin:auto;padding:24px 5%}.hero{padding:28px 0}.eyebrow{color:var(--accent);font-weight:700}.hero h1{font-size:clamp(30px,6vw,52px);margin:8px 0}.hero p,.muted{color:var(--muted);line-height:1.8}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}.stat{font-size:30px;font-weight:800;margin-top:8px}.section{margin:28px 0}.section h2{margin-bottom:14px}.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.wrap{max-width:1150px;margin:auto;padding:24px 5%}
+.hero{padding:25px 0}
+.eyebrow{color:var(--accent);font-weight:700}
+.hero h1{font-size:clamp(30px,6vw,52px);margin:8px 0}
+.hero p,.muted{color:var(--muted);line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}
+.stat{font-size:30px;font-weight:800;margin-top:8px}
+.section{margin:24px 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 input{background:#0c1625;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:12px;width:100%;margin:6px 0}
-.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}.table{width:100%;border-collapse:collapse;margin-top:10px}.table th,.table td{text-align:right;padding:12px;border-bottom:1px solid var(--line)}.table th{color:var(--muted)}
-.notice{padding:12px 14px;background:#172b35;border:1px solid #285548;border-radius:12px;color:#c9f5e8;line-height:1.7}
-footer{padding:25px 5%;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th,.table td{text-align:right;padding:12px;border-bottom:1px solid var(--line)}
+.table th{color:var(--muted)}
+.notice{padding:12px 14px;background:#172b35;border:1px solid #285548;border-radius:12px;color:#c9f5e8;line-height:1.7;margin:12px 0}
+.error{background:#3a2028;border:1px solid #87404c;color:#ffd9df}
 .hidden{display:none!important}
+footer{padding:25px 5%;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
 .light{--bg:#f3f6fa;--panel:#fff;--panel2:#e8eef5;--text:#142033;--muted:#5f7085;--line:#d9e1eb}
-.light .top{background:#fff}.light input{background:#fff;color:#142033}
-@media(max-width:600px){.top{padding:12px 4%}.brand{font-size:16px}.wrap{padding:18px 4%}.table{font-size:13px}.table th,.table td{padding:9px 5px}}
+.light .top{background:#fff}
+.light input{background:#fff;color:#142033}
+@media(max-width:600px){
+ .top{padding:12px 4%}
+ .brand{font-size:16px}
+ .wrap{padding:18px 4%}
+ .table{font-size:13px}
+ .table th,.table td{padding:9px 5px}
+}
 </style>
 </head>
 <body>
+
 <header class="top">
  <div class="brand">NEXORA <span>BUSINESS</span></div>
  <div class="actions">
-  <button class="ghost" id="langBtn">EN</button>
-  <button class="ghost" id="themeBtn" aria-label="Theme">☼</button>
+  <button class="ghost" id="themeBtn">☼</button>
  </div>
 </header>
+
 <main class="wrap">
- <section class="hero">
-  <div class="eyebrow" data-ar="منصة إدارة أعمالك" data-en="YOUR BUSINESS, IN CONTROL">منصة إدارة أعمالك</div>
-  <h1 data-ar="كل شغلك… بمكان واحد." data-en="Run your business. All in one place.">كل شغلك… بمكان واحد.</h1>
-  <p data-ar="إدارة المنتجات والمخزون والعملاء والمبيعات من لوحة واحدة سهلة الاستخدام." data-en="Manage products, inventory, customers and sales from one simple dashboard.">إدارة المنتجات والمخزون والعملاء والمبيعات من لوحة واحدة سهلة الاستخدام.</p>
-  <div class="notice" data-ar="هذه نسخة تجريبية أولية. البيانات تُحفظ على هذا الجهاز فقط، وليست متصلة بعد بقاعدة بيانات سحابية أو حسابات شركات." data-en="This is an early demo. Data is stored only in this browser on this device; cloud database and company accounts are not connected yet.">هذه نسخة تجريبية أولية. البيانات تُحفظ على هذا الجهاز فقط، وليست متصلة بعد بقاعدة بيانات سحابية أو حسابات شركات.</div>
- </section>
- <section class="section">
-  <div class="grid">
-   <div class="card"><div class="muted" data-ar="المنتجات" data-en="Products">المنتجات</div><div class="stat" id="productCount">0</div></div>
-   <div class="card"><div class="muted" data-ar="العملاء" data-en="Customers">العملاء</div><div class="stat" id="customerCount">0</div></div>
-   <div class="card"><div class="muted" data-ar="قيمة المبيعات التجريبية" data-en="Demo sales value">قيمة المبيعات التجريبية</div><div class="stat" id="salesTotal">$0</div></div>
+
+<section class="hero">
+ <div class="eyebrow">منصة إدارة أعمالك</div>
+ <h1>كل شغلك… بمكان واحد.</h1>
+ <p>إدارة المنتجات والمخزون والعملاء والمبيعات من لوحة واحدة.</p>
+ <div class="notice" id="connectionStatus">جاري الاتصال بالخادم...</div>
+</section>
+
+<!-- تسجيل الدخول وإنشاء الحساب -->
+<section class="section card" id="authSection">
+ <h2>مرحباً بك في NEXORA</h2>
+
+ <div class="row">
+  <button id="showLogin">تسجيل الدخول</button>
+  <button class="ghost" id="showRegister">إنشاء حساب شركة</button>
+ </div>
+
+ <form id="loginForm" class="form section">
+  <input id="loginEmail" type="email" required placeholder="البريد الإلكتروني">
+  <input id="loginPassword" type="password" required placeholder="كلمة المرور">
+  <button type="submit">دخول إلى حسابي</button>
+ </form>
+
+ <form id="registerForm" class="form section hidden">
+  <input id="regName" required minlength="2" placeholder="اسمك الكامل">
+  <input id="regEmail" type="email" required placeholder="البريد الإلكتروني">
+  <input id="regPassword" type="password" required minlength="8" placeholder="كلمة المرور (8 أحرف على الأقل)">
+  <input id="regCompany" required minlength="2" placeholder="اسم الشركة أو المتجر">
+  <button type="submit">إنشاء الحساب والشركة</button>
+ </form>
+
+ <div id="authMessage" class="notice hidden"></div>
+</section>
+
+<!-- لوحة التحكم -->
+<section id="dashboard" class="hidden">
+
+ <section class="section card">
+  <div class="row">
+   <div>
+    <div class="muted">الحساب الحالي</div>
+    <h2 id="welcomeName">أهلاً بك</h2>
+    <div class="muted" id="userEmail"></div>
+   </div>
+   <button class="ghost" id="logoutBtn">تسجيل الخروج</button>
   </div>
  </section>
- <section class="section card">
-  <div class="row"><h2 data-ar="إضافة منتج" data-en="Add a product">إضافة منتج</h2></div>
-  <form id="productForm" class="form">
-   <input id="pname" required placeholder="اسم المنتج" data-ph-ar="اسم المنتج" data-ph-en="Product name">
-   <input id="pprice" type="number" min="0" step="0.01" required placeholder="السعر" data-ph-ar="السعر" data-ph-en="Price">
-   <input id="pqty" type="number" min="0" step="1" required placeholder="الكمية" data-ph-ar="الكمية" data-ph-en="Quantity">
-   <button type="submit" data-ar="حفظ المنتج" data-en="Save product">حفظ المنتج</button>
-  </form>
-  <table class="table"><thead><tr><th data-ar="المنتج" data-en="Product">المنتج</th><th data-ar="السعر" data-en="Price">السعر</th><th data-ar="الكمية" data-en="Qty">الكمية</th><th></th></tr></thead><tbody id="products"></tbody></table>
+
+ <section class="section">
+  <div class="grid">
+   <div class="card">
+    <div class="muted">المنتجات</div>
+    <div class="stat" id="productCount">0</div>
+   </div>
+   <div class="card">
+    <div class="muted">العملاء</div>
+    <div class="stat" id="customerCount">0</div>
+   </div>
+   <div class="card">
+    <div class="muted">عدد المبيعات</div>
+    <div class="stat" id="salesCount">0</div>
+   </div>
+   <div class="card">
+    <div class="muted">إجمالي المبيعات</div>
+    <div class="stat" id="salesTotal">$0.00</div>
+   </div>
+  </div>
  </section>
+
+ <!-- المنتجات -->
  <section class="section card">
-  <h2 data-ar="إضافة عميل" data-en="Add a customer">إضافة عميل</h2>
+  <h2>إضافة منتج</h2>
+  <form id="productForm" class="form">
+   <input id="pname" required placeholder="اسم المنتج">
+   <input id="pprice" type="number" min="0" step="0.01" required placeholder="سعر البيع">
+   <input id="pcost" type="number" min="0" step="0.01" value="0" placeholder="سعر الشراء">
+   <input id="pqty" type="number" min="0" step="1" required placeholder="الكمية">
+   <button type="submit">حفظ المنتج</button>
+  </form>
+
+  <div style="overflow-x:auto">
+   <table class="table">
+    <thead>
+     <tr>
+      <th>المنتج</th>
+      <th>سعر البيع</th>
+      <th>الكمية</th>
+     </tr>
+    </thead>
+    <tbody id="products"></tbody>
+   </table>
+  </div>
+ </section>
+
+ <!-- العملاء -->
+ <section class="section card">
+  <h2>إضافة عميل</h2>
   <form id="customerForm" class="form">
-   <input id="cname" required placeholder="اسم العميل" data-ph-ar="اسم العميل" data-ph-en="Customer name">
-   <input id="cphone" placeholder="رقم الهاتف" data-ph-ar="رقم الهاتف" data-ph-en="Phone number">
-   <button type="submit" data-ar="حفظ العميل" data-en="Save customer">حفظ العميل</button>
+   <input id="cname" required placeholder="اسم العميل">
+   <input id="cphone" placeholder="رقم الهاتف">
+   <button type="submit">حفظ العميل</button>
   </form>
   <ul id="customers" class="muted"></ul>
  </section>
+
+ <!-- المبيعات -->
  <section class="section card">
-  <h2 data-ar="تسجيل عملية بيع تجريبية" data-en="Record a demo sale">تسجيل عملية بيع تجريبية</h2>
+  <h2>تسجيل عملية بيع</h2>
   <form id="saleForm" class="form">
-   <input id="samount" type="number" min="0.01" step="0.01" required placeholder="قيمة البيع بالدولار" data-ph-ar="قيمة البيع بالدولار" data-ph-en="Sale amount in USD">
-   <button type="submit" data-ar="تسجيل البيع" data-en="Record sale">تسجيل البيع</button>
+   <input id="samount" type="number" min="0.01" step="0.01" required placeholder="قيمة البيع بالدولار">
+   <button type="submit">تسجيل البيع</button>
   </form>
-  <p class="muted" data-ar="هذه العملية للتجربة فقط ولا تنشئ فاتورة ضريبية." data-en="Demo only; this does not create a tax invoice.">هذه العملية للتجربة فقط ولا تنشئ فاتورة ضريبية.</p>
+  <p class="muted">يسجل النظام قيمة البيع فقط حالياً، ولا ينشئ تفاصيل فاتورة أو يخصم المخزون.</p>
+  <div id="saleMessage" class="notice hidden"></div>
  </section>
+
+</section>
 </main>
-<footer>© <span id="year"></span> NEXORA BUSINESS · <span data-ar="نسخة تجريبية" data-en="Demo version">نسخة تجريبية</span></footer>
+
+<footer>
+ © <span id="year"></span> NEXORA BUSINESS
+</footer>
+
 <script>
-const $=id=>document.getElementById(id);
-let data=JSON.parse(localStorage.getItem('nexoraDemo')||'{"products":[],"customers":[],"sales":[]}');
-let lang=localStorage.getItem('nexoraLang')||'ar';
-function save(){localStorage.setItem('nexoraDemo',JSON.stringify(data));render()}
-function render(){
- $('productCount').textContent=data.products.length;
- $('customerCount').textContent=data.customers.length;
- $('salesTotal').textContent='$'+data.sales.reduce((a,b)=>a+b,0).toFixed(2);
- $('products').innerHTML=data.products.map((p,i)=>`<tr><td>${escapeHtml(p.name)}</td><td>$${p.price.toFixed(2)}</td><td>${p.qty}</td><td><button class="ghost" onclick="removeProduct(${i})">×</button></td></tr>`).join('');
- $('customers').innerHTML=data.customers.map(c=>`<li>${escapeHtml(c.name)} ${c.phone?'— '+escapeHtml(c.phone):''}</li>`).join('');
+const API = "https://nexora-busines.onrender.com";
+
+const $ = id => document.getElementById(id);
+
+let token = localStorage.getItem("nexoraToken") || "";
+let currentUser = null;
+let products = [];
+let customers = [];
+let sales = [];
+
+function message(id, text, isError=false) {
+ const el = $(id);
+ el.textContent = text;
+ el.classList.remove("hidden","error");
+ if(isError) el.classList.add("error");
 }
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function removeProduct(i){data.products.splice(i,1);save()}
-$('productForm').addEventListener('submit',e=>{e.preventDefault();data.products.push({name:$('pname').value.trim(),price:Number($('pprice').value),qty:Number($('pqty').value)});e.target.reset();save()});
-$('customerForm').addEventListener('submit',e=>{e.preventDefault();data.customers.push({name:$('cname').value.trim(),phone:$('cphone').value.trim()});e.target.reset();save()});
-$('saleForm').addEventListener('submit',e=>{e.preventDefault();data.sales.push(Number($('samount').value));e.target.reset();save()});
-function setLang(){document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-ar]').forEach(el=>el.textContent=el.dataset[lang]);document.querySelectorAll('[data-ph-ar]').forEach(el=>el.placeholder=el.dataset['ph'+(lang==='ar'?'Ar':'En')]);$('langBtn').textContent=lang==='ar'?'EN':'عربي';localStorage.setItem('nexoraLang',lang)}
-$('langBtn').onclick=()=>{lang=lang==='ar'?'en':'ar';setLang()};
-$('themeBtn').onclick=()=>document.body.classList.toggle('light');
-$('year').textContent=new Date().getFullYear();setLang();render();
+
+function hideMessage(id) {
+ $(id).classList.add("hidden");
+}
+
+async function api(path, options={}) {
+ const headers = {
+  "Content-Type":"application/json",
+  ...(options.headers || {})
+ };
+
+ if(token) headers.Authorization = "Bearer " + token;
+
+ const response = await fetch(API + path, {
+  ...options,
+  headers
+ });
+
+ let result = {};
+ try {
+  result = await response.json();
+ } catch {}
+
+ if(!response.ok) {
+  throw new Error(result.error || "حدث خطأ في الاتصال بالخادم");
+ }
+
+ return result;
+}
+
+// اختبار الاتصال
+async function checkServer() {
+ try {
+  const result = await api("/health");
+  $("connectionStatus").textContent =
+   "متصل بالخادم بنجاح ✓ " + result.app;
+  $("connectionStatus").classList.remove("error");
+ } catch {
+  message("connectionStatus","تعذر الاتصال بالخادم حالياً",true);
+ }
+}
+
+// تبديل نماذج الدخول
+$("showLogin").onclick = () => {
+ $("loginForm").classList.remove("hidden");
+ $("registerForm").classList.add("hidden");
+ hideMessage("authMessage");
+};
+
+$("showRegister").onclick = () => {
+ $("registerForm").classList.remove("hidden");
+ $("loginForm").classList.add("hidden");
+ hideMessage("authMessage");
+};
+
+// تسجيل الدخول
+$("loginForm").addEventListener("submit", async e => {
+ e.preventDefault();
+
+ const button = e.submitter;
+ button.disabled = true;
+ button.textContent = "جاري تسجيل الدخول...";
+
+ try {
+  const result = await api("/api/auth/login", {
+   method:"POST",
+   body:JSON.stringify({
+    email:$("loginEmail").value.trim(),
+    password:$("loginPassword").value
+   })
+  });
+
+  token = result.token;
+  localStorage.setItem("nexoraToken",token);
+
+  await openDashboard();
+ } catch(error) {
+  message("authMessage",error.message,true);
+ } finally {
+  button.disabled = false;
+  button.textContent = "دخول إلى حسابي";
+ }
+});
+
+// إنشاء حساب شركة
+$("registerForm").addEventListener("submit", async e => {
+ e.preventDefault();
+
+ const button = e.submitter;
+ button.disabled = true;
+ button.textContent = "جاري إنشاء الحساب...";
+
+ try {
+  const result = await api("/api/auth/register", {
+   method:"POST",
+   body:JSON.stringify({
+    name:$("regName").value.trim(),
+    email:$("regEmail").value.trim(),
+    password:$("regPassword").value,
+    companyName:$("regCompany").value.trim()
+   })
+  });
+
+  token = result.token;
+  localStorage.setItem("nexoraToken",token);
+
+  await openDashboard();
+ } catch(error) {
+  message("authMessage",error.message,true);
+ } finally {
+  button.disabled = false;
+  button.textContent = "إنشاء الحساب والشركة";
+ }
+});
+
+// تحميل بيانات الحساب
+async function openDashboard() {
+ try {
+  const me = await api("/api/me");
+
+  currentUser = me.user;
+
+  $("welcomeName").textContent = "أهلاً " + currentUser.name;
+  $("userEmail").textContent = currentUser.email;
+
+  $("authSection").classList.add("hidden");
+  $("dashboard").classList.remove("hidden");
+
+  await loadData();
+
+ } catch(error) {
+  token = "";
+  localStorage.removeItem("nexoraToken");
+  $("dashboard").classList.add("hidden");
+  $("authSection").classList.remove("hidden");
+  message("authMessage","انتهت جلسة الدخول. سجل الدخول مرة أخرى.",true);
+ }
+}
+
+// تحميل المنتجات والعملاء والمبيعات
+async function loadData() {
+ try {
+  const results = await Promise.all([
+   api("/api/products"),
+   api("/api/customers"),
+   api("/api/sales")
+  ]);
+
+  products = results[0];
+  customers = results[1];
+  sales = results[2];
+
+  render();
+ } catch(error) {
+  alert(error.message);
+ }
+}
+
+// عرض البيانات
+function escapeHtml(value) {
+ return String(value ?? "").replace(/[&<>"']/g,c=>({
+  "&":"&amp;",
+  "<":"&lt;",
+  ">":"&gt;",
+  '"':"&quot;",
+  "'":"&#39;"
+ }[c]));
+}
+
+function render() {
+ $("productCount").textContent = products.length;
+ $("customerCount").textContent = customers.length;
+ $("salesCount").textContent = sales.length;
+
+ const total = sales.reduce(
+  (sum,sale)=>sum+Number(sale.total || 0),0
+ );
+
+ $("salesTotal").textContent = "$" + total.toFixed(2);
+
+ $("products").innerHTML = products.map(p=>`
+  <tr>
+   <td>${escapeHtml(p.name)}</td>
+   <td>$${Number(p.selling_price).toFixed(2)}</td>
+   <td>${Number(p.quantity)}</td>
+  </tr>
+ `).join("");
+
+ $("customers").innerHTML = customers.map(c=>`
+  <li>
+   ${escapeHtml(c.name)}
+   ${c.phone ? " — "+escapeHtml(c.phone) : ""}
+  </li>
+ `).join("");
+}
+
+// إضافة منتج
+$("productForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+
+ const button = e.submitter;
+ button.disabled = true;
+
+ try {
+  await api("/api/products",{
+   method:"POST",
+   body:JSON.stringify({
+    name:$("pname").value.trim(),
+    price:Number($("pprice").value),
+    cost:Number($("pcost").value || 0),
+    quantity:Number($("pqty").value)
+   })
+  });
+
+  e.target.reset();
+  await loadData();
+  alert("تم حفظ المنتج بنجاح");
+ } catch(error) {
+  alert(error.message);
+ } finally {
+  button.disabled = false;
+ }
+});
+
+// إضافة عميل
+$("customerForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+
+ const button = e.submitter;
+ button.disabled = true;
+
+ try {
+  await api("/api/customers",{
+   method:"POST",
+   body:JSON.stringify({
+    name:$("cname").value.trim(),
+    phone:$("cphone").value.trim()
+   })
+  });
+
+  e.target.reset();
+  await loadData();
+  alert("تم حفظ العميل بنجاح");
+ } catch(error) {
+  alert(error.message);
+ } finally {
+  button.disabled = false;
+ }
+});
+
+// تسجيل بيع
+$("saleForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+
+ const button = e.submitter;
+ button.disabled = true;
+
+ try {
+  await api("/api/sales",{
+   method:"POST",
+   body:JSON.stringify({
+    total:Number($("samount").value)
+   })
+  });
+
+  e.target.reset();
+  await loadData();
+  message("saleMessage","تم تسجيل عملية البيع بنجاح");
+ } catch(error) {
+  message("saleMessage",error.message,true);
+ } finally {
+  button.disabled = false;
+ }
+});
+
+// تسجيل الخروج
+$("logoutBtn").onclick = () => {
+ token = "";
+ currentUser = null;
+
+ localStorage.removeItem("nexoraToken");
+
+ $("dashboard").classList.add("hidden");
+ $("authSection").classList.remove("hidden");
+ $("loginForm").reset();
+ $("registerForm").reset();
+
+ message("authMessage","تم تسجيل الخروج بنجاح");
+};
+
+// الوضع الليلي والفاتح
+$("themeBtn").onclick = () => {
+ document.body.classList.toggle("light");
+};
+
+// البداية
+$("year").textContent = new Date().getFullYear();
+
+checkServer();
+
+if(token) {
+ openDashboard();
+}
 </script>
-</body></html>
+
+</body>
+</html>
